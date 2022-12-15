@@ -1,0 +1,7 @@
+questions:
+- variable: recommendedPolicies.enabled
+  default: "false"
+  description: "The chart allows the user to install some recommended policies to enforce some best practice security checks."
+  label: Enable Recommended Policies
+  type: boolean
+  group: "General"
