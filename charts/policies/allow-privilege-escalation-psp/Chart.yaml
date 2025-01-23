@@ -16,7 +16,7 @@ keywords:
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 0.1.13
+version: 0.1.14
 
 appVersion: 0.1.11
 
@@ -39,6 +39,5 @@ annotations:
   # See the Cluster Tools section to learn more about when to set this value to `cluster-tool`.
   catalog.cattle.io/type: cluster-tool
 
-  kubewarden.io/policy: true
- 
-kubewardenPolicy: true
+  ## We can use the `scope` annotation to control where the chart is available, which we can determine as a Kubewarden Policy
+  catalog.cattle.io/scope: kubewarden-policy
