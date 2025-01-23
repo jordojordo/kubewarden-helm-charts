@@ -7,6 +7,32 @@ entries:
       catalog.cattle.io/permits-os: linux,windows
       catalog.cattle.io/type: cluster-tool
       catalog.cattle.io/ui-component: kubewarden
+      kubewarden.io/policy: "true"
+    apiVersion: v2
+    appVersion: 0.1.11
+    created: "2025-01-23T20:26:37.428332034Z"
+    description: Helm chart for deploying the allow-privilege-escalation-psp Kubewarden
+      policy
+    digest: cd551f3a20a34c92983887a6c2a0878678ed620ff7514f094d075e9736ffec02
+    home: https://www.kubewarden.io/
+    icon: https://www.kubewarden.io/images/icon-kubewarden.svg
+    keywords:
+    - Security
+    - Infrastructure
+    - Monitoring
+    - KubewardenPolicy
+    kubeVersion: '>= 1.19.0'
+    name: allow-privilege-escalation-psp
+    type: application
+    urls:
+    - https://github.com/jordojordo/kubewarden-helm-charts/releases/download/allow-privilege-escalation-psp-0.1.13/allow-privilege-escalation-psp-0.1.13.tgz
+    version: 0.1.13
+  - annotations:
+      catalog.cattle.io/certified: rancher
+      catalog.cattle.io/os: linux
+      catalog.cattle.io/permits-os: linux,windows
+      catalog.cattle.io/type: cluster-tool
+      catalog.cattle.io/ui-component: kubewarden
     apiVersion: v2
     appVersion: 0.1.11
     created: "2025-01-23T20:19:18.100593877Z"
@@ -14935,4 +14961,4 @@ entries:
     urls:
     - https://github.com/jordojordo/kubewarden-helm-charts/releases/download/verify-image-signatures-0.1.7/verify-image-signatures-0.1.7.tgz
     version: 0.1.7
-generated: "2025-01-23T20:19:18.722886089Z"
+generated: "2025-01-23T20:26:37.429090446Z"
