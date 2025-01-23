@@ -36,3 +36,11 @@ annotations:
   # Valid values for the following annotation include: `cluster-tool`, `app` or `cluster-template`
   # See the Cluster Tools section to learn more about when to set this value to `cluster-tool`.
   catalog.cattle.io/type: cluster-tool
+
+  # Custom UI annotations
+  io.artifacthub.displayName: User Group PSP
+  io.artifacthub.keywords: ["psp","container","user","group"],
+  kubewarden/mutation: true
+  kubewarden/resources: ["Pod"]
+  kubewarden/hidden-ui: false
+  catalog.cattle.io/hidden: true
