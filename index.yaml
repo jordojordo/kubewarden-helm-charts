@@ -14530,4 +14530,31 @@ entries:
     urls:
     - https://github.com/kubewarden/helm-charts/releases/download/kubewarden-defaults-0.1.0/kubewarden-defaults-0.1.0.tgz
     version: 0.1.0
-generated: "2025-01-22T14:17:55.915278665Z"
+  user-group-psp:
+  - annotations:
+      catalog.cattle.io/certified: rancher
+      catalog.cattle.io/os: linux
+      catalog.cattle.io/permits-os: linux,windows
+      catalog.cattle.io/rancher-version: '>= 2.6.0-0 <= 2.6.100-0'
+      catalog.cattle.io/scope: management
+      catalog.cattle.io/type: cluster-tool
+      catalog.cattle.io/ui-component: kubewarden
+      catalog.cattle.io/upstream-version: 0.2.0
+    apiVersion: v2
+    appVersion: 0.2.0
+    created: "2025-01-23T19:49:19.616696319Z"
+    description: Helm chart for deploying the user-group-psp Kubewarden policy
+    digest: 3e010e6ff5401eea458fa57ea417cded87867b53de74d312a467f5ff878755cf
+    home: https://www.kubewarden.io/
+    icon: https://www.kubewarden.io/images/icon-kubewarden.svg
+    keywords:
+    - Security
+    - Infrastructure
+    - Monitoring
+    kubeVersion: '>= 1.19.0'
+    name: user-group-psp
+    type: application
+    urls:
+    - https://github.com/jordojordo/kubewarden-helm-charts/releases/download/user-group-psp-0.2.1/user-group-psp-0.2.1.tgz
+    version: 0.2.1
+generated: "2025-01-23T19:49:19.618200641Z"
