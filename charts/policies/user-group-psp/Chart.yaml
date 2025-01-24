@@ -15,7 +15,7 @@ keywords:
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 0.2.2
+version: 0.2.3
 
 appVersion: 0.2.0
 
@@ -33,9 +33,5 @@ annotations:
   # catalog.cattle.io/rancher-version: ">= 2.6.0-0 <= 2.6.100-0" # Chart will only be available for users in the specified Rancher version(s), here its 2.5.0-2.5.99. This _must_ use build metadata or it won't work correctly for future RC's.
   # catalog.cattle.io/upstream-version: "0.2.0"  # The version of the upstream chart or app. It prevents the unexpected "downgrade" when upgrading an installed chart that uses our 100.x.x+upVersion version schema.
 
-  # Valid values for the following annotation include: `cluster-tool`, `app` or `cluster-template`
-  # See the Cluster Tools section to learn more about when to set this value to `cluster-tool`.
-  catalog.cattle.io/type: cluster-tool
-
-  ## We can use the `scope` annotation to control where the chart is available, which we can determine as a Kubewarden Policy
-  catalog.cattle.io/scope: kubewarden-policy
+  # We can use the `type` annotation to control where the chart is available, which we can define as a Kubewarden Policy
+  catalog.cattle.io/type: kubewarden-policy
