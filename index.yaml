@@ -3,6 +3,34 @@ entries:
   allow-privilege-escalation-psp:
   - annotations:
       catalog.cattle.io/certified: rancher
+      catalog.cattle.io/hidden: "true"
+      catalog.cattle.io/os: linux
+      catalog.cattle.io/permits-os: linux,windows
+      catalog.cattle.io/type: kubewarden-policy
+      catalog.cattle.io/ui-component: kubewarden
+      kubewarden/contextAwareResources: "false"
+      kubewarden/displayName: Allow Privilege Escalation PSP
+      kubewarden/mutation: "true"
+      kubewarden/resources: Deployment,Replicaset,Statefulset,Daemonset,Replicationcontroller,Job,Cronjob,Pod
+    apiVersion: v2
+    appVersion: 0.1.11
+    created: "2025-01-24T17:09:48.183620446Z"
+    description: Helm chart for deploying the allow-privilege-escalation-psp Kubewarden
+      policy
+    digest: 4720b811e1f67fb7dd00e6c0f382caef66440708f7c33c63a0bbf5dda97f5cf6
+    home: https://www.kubewarden.io/
+    icon: https://www.kubewarden.io/images/icon-kubewarden.svg
+    keywords:
+    - PSP
+    - privilege escalation
+    kubeVersion: '>= 1.19.0'
+    name: allow-privilege-escalation-psp
+    type: application
+    urls:
+    - https://github.com/jordojordo/kubewarden-helm-charts/releases/download/allow-privilege-escalation-psp-0.1.16/allow-privilege-escalation-psp-0.1.16.tgz
+    version: 0.1.16
+  - annotations:
+      catalog.cattle.io/certified: rancher
       catalog.cattle.io/os: linux
       catalog.cattle.io/permits-os: linux,windows
       catalog.cattle.io/type: kubewarden-policy
@@ -132,6 +160,33 @@ entries:
   apparmor-psp:
   - annotations:
       catalog.cattle.io/certified: rancher
+      catalog.cattle.io/hidden: "true"
+      catalog.cattle.io/os: linux
+      catalog.cattle.io/permits-os: linux,windows
+      catalog.cattle.io/type: kubewarden-policy
+      catalog.cattle.io/ui-component: kubewarden
+      kubewarden/contextAwareResources: "false"
+      kubewarden/displayName: AppArmor PSP
+      kubewarden/mutation: "false"
+      kubewarden/resources: Pod
+    apiVersion: v2
+    appVersion: 0.1.9
+    created: "2025-01-24T17:09:48.347712295Z"
+    description: Helm chart for deploying the apparmor-psp Kubewarden policy
+    digest: 6aa21754422db8d6593de8ce0376a8939d0c66d663bdc804a7c52f9c8b08ceec
+    home: https://www.kubewarden.io/
+    icon: https://www.kubewarden.io/images/icon-kubewarden.svg
+    keywords:
+    - psp
+    - apparmor
+    kubeVersion: '>= 1.19.0'
+    name: apparmor-psp
+    type: application
+    urls:
+    - https://github.com/jordojordo/kubewarden-helm-charts/releases/download/apparmor-psp-0.1.13/apparmor-psp-0.1.13.tgz
+    version: 0.1.13
+  - annotations:
+      catalog.cattle.io/certified: rancher
       catalog.cattle.io/os: linux
       catalog.cattle.io/permits-os: linux,windows
       catalog.cattle.io/type: kubewarden-policy
@@ -227,6 +282,35 @@ entries:
     - https://github.com/jordojordo/kubewarden-helm-charts/releases/download/apparmor-psp-0.1.9/apparmor-psp-0.1.9.tgz
     version: 0.1.9
   capabilities-psp:
+  - annotations:
+      catalog.cattle.io/certified: rancher
+      catalog.cattle.io/hidden: "true"
+      catalog.cattle.io/os: linux
+      catalog.cattle.io/permits-os: linux,windows
+      catalog.cattle.io/type: kubewarden-policy
+      catalog.cattle.io/ui-component: kubewarden
+      kubewarden/contextAwareResources: "false"
+      kubewarden/displayName: Capabilities PSP
+      kubewarden/mutation: "true"
+      kubewarden/resources: Deployment,Replicaset,Statefulset,Daemonset,Replicationcontroller,Job,Cronjob,Pod
+    apiVersion: v2
+    appVersion: 0.1.9
+    created: "2025-01-24T17:09:48.509125546Z"
+    description: Helm chart for deploying the capabilities-psp Kubewarden policy
+    digest: 0f3550ffc0b3c5ec0d9e88b1ee754a6eb356ab9350e05236e8ac993c89aab743
+    home: https://www.kubewarden.io/
+    icon: https://www.kubewarden.io/images/icon-kubewarden.svg
+    keywords:
+    - psp
+    - container
+    - capability
+    - capabilities
+    kubeVersion: '>= 1.19.0'
+    name: capabilities-psp
+    type: application
+    urls:
+    - https://github.com/jordojordo/kubewarden-helm-charts/releases/download/capabilities-psp-0.1.13/capabilities-psp-0.1.13.tgz
+    version: 0.1.13
   - annotations:
       catalog.cattle.io/certified: rancher
       catalog.cattle.io/os: linux
@@ -14950,7 +15034,65 @@ entries:
     urls:
     - https://github.com/jordojordo/kubewarden-helm-charts/releases/download/pod-privileged-0.2.1/pod-privileged-0.2.1.tgz
     version: 0.2.1
+  pod-privileged-policy:
+  - annotations:
+      catalog.cattle.io/certified: rancher
+      catalog.cattle.io/hidden: "true"
+      catalog.cattle.io/os: linux
+      catalog.cattle.io/permits-os: linux,windows
+      catalog.cattle.io/type: kubewarden-policy
+      catalog.cattle.io/ui-component: kubewarden
+      kubewarden/contextAwareResources: "false"
+      kubewarden/displayName: Pod Privileged Policy
+      kubewarden/mutation: "false"
+      kubewarden/resources: Pod
+    apiVersion: v2
+    appVersion: 0.2.1
+    created: "2025-01-24T17:09:48.696772532Z"
+    description: Helm chart for deploying the pod-privileged Kubewarden policy
+    digest: c566adc0cddf255d0508c8a7d086c05c325bf5fb9501fa7f6d11c16225f408a2
+    home: https://www.kubewarden.io/
+    icon: https://www.kubewarden.io/images/icon-kubewarden.svg
+    keywords:
+    - psp
+    - pod
+    - container
+    - privileged
+    kubeVersion: '>= 1.19.0'
+    name: pod-privileged-policy
+    type: application
+    urls:
+    - https://github.com/jordojordo/kubewarden-helm-charts/releases/download/pod-privileged-policy-0.2.5/pod-privileged-policy-0.2.5.tgz
+    version: 0.2.5
   pod-runtime-class:
+  - annotations:
+      catalog.cattle.io/certified: rancher
+      catalog.cattle.io/hidden: "true"
+      catalog.cattle.io/os: linux
+      catalog.cattle.io/permits-os: linux,windows
+      catalog.cattle.io/type: kubewarden-policy
+      catalog.cattle.io/ui-component: kubewarden
+      kubewarden/contextAwareResources: "false"
+      kubewarden/displayName: Pod Runtime Class
+      kubewarden/mutation: "true"
+      kubewarden/resources: Pod
+    apiVersion: v2
+    appVersion: 0.1.4
+    created: "2025-01-24T17:09:48.907921796Z"
+    description: Helm chart for deploying the pod-runtime-class Kubewarden policy
+    digest: c9b21ff7bb2475fe9cd7bbdd06b4eb035eb2c16b66225fd5d59e41c5b0914328
+    home: https://www.kubewarden.io/
+    icon: https://www.kubewarden.io/images/icon-kubewarden.svg
+    keywords:
+    - pod
+    - runtime
+    - container runtime
+    kubeVersion: '>= 1.19.0'
+    name: pod-runtime-class
+    type: application
+    urls:
+    - https://github.com/jordojordo/kubewarden-helm-charts/releases/download/pod-runtime-class-0.1.8/pod-runtime-class-0.1.8.tgz
+    version: 0.1.8
   - annotations:
       catalog.cattle.io/certified: rancher
       catalog.cattle.io/os: linux
@@ -15050,6 +15192,34 @@ entries:
   trusted-repos:
   - annotations:
       catalog.cattle.io/certified: rancher
+      catalog.cattle.io/hidden: "true"
+      catalog.cattle.io/os: linux
+      catalog.cattle.io/permits-os: linux,windows
+      catalog.cattle.io/type: kubewarden-policy
+      catalog.cattle.io/ui-component: kubewarden
+      kubewarden/contextAwareResources: "false"
+      kubewarden/displayName: Trusted Repositories
+      kubewarden/mutation: "false"
+      kubewarden/resources: Pod
+    apiVersion: v2
+    appVersion: 0.1.7
+    created: "2025-01-24T17:09:49.066914409Z"
+    description: Helm chart for deploying the trusted-repos Kubewarden policy
+    digest: a5e6b8f34706a96b27349534537f9dfa1c84eda697856879c0e3425dc25af293
+    home: https://www.kubewarden.io/
+    icon: https://www.kubewarden.io/images/icon-kubewarden.svg
+    keywords:
+    - image
+    - registry
+    - tag
+    kubeVersion: '>= 1.19.0'
+    name: trusted-repos
+    type: application
+    urls:
+    - https://github.com/jordojordo/kubewarden-helm-charts/releases/download/trusted-repos-0.1.11/trusted-repos-0.1.11.tgz
+    version: 0.1.11
+  - annotations:
+      catalog.cattle.io/certified: rancher
       catalog.cattle.io/os: linux
       catalog.cattle.io/permits-os: linux,windows
       catalog.cattle.io/type: kubewarden-policy
@@ -15145,6 +15315,35 @@ entries:
     - https://github.com/jordojordo/kubewarden-helm-charts/releases/download/trusted-repos-0.1.7/trusted-repos-0.1.7.tgz
     version: 0.1.7
   user-group-psp:
+  - annotations:
+      catalog.cattle.io/certified: rancher
+      catalog.cattle.io/hidden: "true"
+      catalog.cattle.io/os: linux
+      catalog.cattle.io/permits-os: linux,windows
+      catalog.cattle.io/type: kubewarden-policy
+      catalog.cattle.io/ui-component: kubewarden
+      kubewarden/contextAwareResources: "false"
+      kubewarden/displayName: User Group PSP
+      kubewarden/mutation: "true"
+      kubewarden/resources: Pod
+    apiVersion: v2
+    appVersion: 0.2.0
+    created: "2025-01-24T17:09:49.204848739Z"
+    description: Helm chart for deploying the user-group-psp Kubewarden policy
+    digest: f2b77389a5067ccb3e921755166fe383bb22fb5311b427003843676d68adaa2e
+    home: https://www.kubewarden.io/
+    icon: https://www.kubewarden.io/images/icon-kubewarden.svg
+    keywords:
+    - psp
+    - container
+    - user
+    - group
+    kubeVersion: '>= 1.19.0'
+    name: user-group-psp
+    type: application
+    urls:
+    - https://github.com/jordojordo/kubewarden-helm-charts/releases/download/user-group-psp-0.2.4/user-group-psp-0.2.4.tgz
+    version: 0.2.4
   - annotations:
       catalog.cattle.io/certified: rancher
       catalog.cattle.io/os: linux
@@ -15247,6 +15446,35 @@ entries:
   verify-image-signatures:
   - annotations:
       catalog.cattle.io/certified: rancher
+      catalog.cattle.io/hidden: "true"
+      catalog.cattle.io/os: linux
+      catalog.cattle.io/permits-os: linux,windows
+      catalog.cattle.io/type: kubewarden-policy
+      catalog.cattle.io/ui-component: kubewarden
+      kubewarden/contextAwareResources: "false"
+      kubewarden/displayName: Verify Image Signatures
+      kubewarden/mutation: "true"
+      kubewarden/resources: Pod
+    apiVersion: v2
+    appVersion: 0.1.7
+    created: "2025-01-24T17:09:49.349151361Z"
+    description: Helm chart for deploying the verify-image-signatures Kubewarden policy
+    digest: 661a8300270c839a427695b264fc077dc25c838a11101ba8ad242ede551e7c1b
+    home: https://www.kubewarden.io/
+    icon: https://www.kubewarden.io/images/icon-kubewarden.svg
+    keywords:
+    - pod
+    - signature
+    - sigstore
+    - trusted
+    kubeVersion: '>= 1.19.0'
+    name: verify-image-signatures
+    type: application
+    urls:
+    - https://github.com/jordojordo/kubewarden-helm-charts/releases/download/verify-image-signatures-0.1.11/verify-image-signatures-0.1.11.tgz
+    version: 0.1.11
+  - annotations:
+      catalog.cattle.io/certified: rancher
       catalog.cattle.io/os: linux
       catalog.cattle.io/permits-os: linux,windows
       catalog.cattle.io/type: kubewarden-policy
@@ -15341,4 +15569,4 @@ entries:
     urls:
     - https://github.com/jordojordo/kubewarden-helm-charts/releases/download/verify-image-signatures-0.1.7/verify-image-signatures-0.1.7.tgz
     version: 0.1.7
-generated: "2025-01-24T14:32:58.520760377Z"
+generated: "2025-01-24T17:09:49.350036041Z"
