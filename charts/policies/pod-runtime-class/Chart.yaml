@@ -41,5 +41,4 @@ annotations:
   kubewarden/displayName: Pod Runtime Class
   kubewarden/mutation: 'true'
   kubewarden/contextAwareResources: 'false'
-  kubewarden/resources:
-    - Pod
+  kubewarden/resources: Pod

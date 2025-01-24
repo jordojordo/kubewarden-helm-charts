@@ -41,5 +41,4 @@ annotations:
   kubewarden/displayName: Trusted Repositories
   kubewarden/mutation: 'false'
   kubewarden/contextAwareResources: 'false'
-  kubewarden/resources:
-    - Pod
+  kubewarden/resources: Pod

@@ -42,5 +42,4 @@ annotations:
   kubewarden/displayName: Verify Image Signatures
   kubewarden/mutation: 'true'
   kubewarden/contextAwareResources: 'false'
-  kubewarden/resources:
-    - Pod
+  kubewarden/resources: Pod

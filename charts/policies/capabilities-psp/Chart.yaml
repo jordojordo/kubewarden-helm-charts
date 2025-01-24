@@ -42,12 +42,4 @@ annotations:
   kubewarden/displayName: Capabilities PSP
   kubewarden/mutation: 'true'
   kubewarden/contextAwareResources: 'false'
-  kubewarden/resources:
-    - Deployment
-    - ReplicaSet
-    - StatefulSet
-    - DaemonSet
-    - ReplicationController
-    - Job
-    - CronJob
-    - Pod
+  kubewarden/resources: Deployment,Replicaset,Statefulset,Daemonset,Replicationcontroller,Job,Cronjob,Pod

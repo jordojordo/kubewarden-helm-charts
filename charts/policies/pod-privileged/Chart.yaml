@@ -42,5 +42,4 @@ annotations:
   kubewarden/displayName: Pod Privileged Policy
   kubewarden/mutation: 'false'
   kubewarden/contextAwareResources: 'false'
-  kubewarden/resources:
-    - Pod
+  kubewarden/resources: Pod
