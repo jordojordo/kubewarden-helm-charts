@@ -8,15 +8,13 @@ type: application
 home: https://www.kubewarden.io/
 kubeVersion: ">= 1.19.0"
 keywords:
-  - Security
-  - Infrastructure
-  - Monitoring
-  - KubewardenPolicy
+  - PSP
+  - privilege escalation
 
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 0.1.15
+version: 0.1.16
 
 appVersion: 0.1.11
 
@@ -26,6 +24,7 @@ annotations:
   catalog.cattle.io/ui-component: kubewarden # This is added for custom UI deployment of a chart
   catalog.cattle.io/os: linux   # this means linux only, other choice here is "windows". For charts that support both, don't add this annotation
   catalog.cattle.io/permits-os: linux,windows
+  catalog.cattle.io/hidden: 'true' # Hide the chart from the catalog chart page
 
   # optional ones:
   # catalog.cattle.io/requires-gvr: "policyservers.policies.kubewarden.io/v1" # Declare that this chart provides a type, which other charts may use in `requires-gvr`. Only add to parent, not CRD chart.
@@ -37,3 +36,17 @@ annotations:
 
   # We can use the `type` annotation to control where the chart is available, which we can define as a Kubewarden Policy
   catalog.cattle.io/type: kubewarden-policy
+
+  # Annotations needed for the UI
+  kubewarden/displayName: Allow Privilege Escalation PSP
+  kubewarden/mutation: 'true'
+  kubewarden/contextAwareResources: 'false'
+  kubewarden/resources: 
+    - Deployment
+    - ReplicaSet
+    - StatefulSet
+    - DaemonSet
+    - ReplicationController
+    - Job
+    - CronJob
+    - Pod

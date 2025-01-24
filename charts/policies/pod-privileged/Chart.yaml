@@ -1,21 +1,22 @@
 # This is a Helm Chart Chart.yaml file. Used to build a Rancher Helm chart.
 ---
 apiVersion: v2
-name: pod-privileged
+name: pod-privileged-policy
 description: Helm chart for deploying the pod-privileged Kubewarden policy
 icon: https://www.kubewarden.io/images/icon-kubewarden.svg
 type: application
 home: https://www.kubewarden.io/
 kubeVersion: ">= 1.19.0"
 keywords:
-  - Security
-  - Infrastructure
-  - Monitoring
+  - psp
+  - pod
+  - container
+  - privileged
 
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 0.2.4
+version: 0.2.5
 
 appVersion: 0.2.1
 
@@ -25,6 +26,7 @@ annotations:
   catalog.cattle.io/ui-component: kubewarden # This is added for custom UI deployment of a chart
   catalog.cattle.io/os: linux   # this means linux only, other choice here is "windows". For charts that support both, don't add this annotation
   catalog.cattle.io/permits-os: linux,windows
+  catalog.cattle.io/hidden: 'true' # Hide the chart from the catalog chart page
 
   # optional ones:
   # catalog.cattle.io/requires-gvr: "policyservers.policies.kubewarden.io/v1" # Declare that this chart provides a type, which other charts may use in `requires-gvr`. Only add to parent, not CRD chart.
@@ -35,3 +37,10 @@ annotations:
 
   # We can use the `type` annotation to control where the chart is available, which we can define as a Kubewarden Policy
   catalog.cattle.io/type: kubewarden-policy
+
+  # Annotations needed for the UI
+  kubewarden/displayName: Pod Privileged Policy
+  kubewarden/mutation: 'false'
+  kubewarden/contextAwareResources: 'false'
+  kubewarden/resources:
+    - Pod
