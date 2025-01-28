@@ -17,7 +17,7 @@ spec:
       operations:
         - CREATE
         - UPDATE
-  settings: |
+  settings:
     allowed_profiles:
       # list of allowed AppArmor profiles.
       # If no profile is defined, Kubernetes will leave the final choice to the
