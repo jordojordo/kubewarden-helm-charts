@@ -17,7 +17,7 @@ spec:
       operations:
         - CREATE
         - UPDATE
-  settings: |
+  settings:
     # Following fields take a list of Linux capabilities, in all caps, without
     #  the 'CAP_' prefix.
     allowed_capabilities:
