@@ -1,42 +1,27 @@
-# This is a Rancher questions file
----
 questions:
-# General policy questions:
-- variable: "clusterScoped"
-  type: boolean
-  default: true
-  required: true
-  label: Scope of policy (cluster-wide or namespaced)
-  description: |
-    Either a cluster-wide policy (ClusterAdmissionPolicy) or a
-    namespaced one (AdmissionPolicy). If Namespaced, the namespace of the releaes
-    is what the AdmissionPolicy will be deployed into and apply for.
+- default: [""]
+  description: Provides a list of capabilities that are allowed to be added to a container
+  tooltip: Specified as the capability name in ALL_CAPS. (e.g. `CHOWN`, `KILL`)
   group: Settings
-- variable: "spec.mode"
-  type: enum
-  options:
-    - "monitor"
-    - "protect"
-  default: "protect"
-  required: true
-  label: Execution mode of the policy
-  description: Execution mode of the policy. "protect" will reject requests,
-    "monitor" will log them. Transitioning from "monitor" to "protect" is
-    allowed, but not from "protect" to "monitor".
+  label: Allowed capabilities
+  required: false
+  type: array[
+  variable: allowed_capabilities
+- default: [""]
+  description: The capabilities which must be dropped from containers.
+  tooltip: Specified as the capability name in ALL_CAPS. (e.g. `NET_ADMIN`)
   group: Settings
-- variable: "spec.mutating"
-  type: boolean
-  default: false
-  required: true
-  label: mutating
-  description: Whether the policy has the ability to mutate incoming requests or
-    not.
+  label: Required drop capabilities
+  required: false
+  type: array[
+  variable: required_drop_capabilities
+- default: [""]
+  description: >-
+    The capabilities which are added to containers by default, in addition to
+    the runtime defaults.
+  tooltip: Specified as the capability name in ALL_CAPS. (e.g. `CHOWN`)
   group: Settings
-
-# Specific policy settings questions:
--
-  variable: "spec.settings"
-  type: multiline
-  default: ''
-  group: Settings
-  description: Policy settings
+  label: Default add capabilities
+  required: false
+  type: array[
+  variable: default_add_capabilities

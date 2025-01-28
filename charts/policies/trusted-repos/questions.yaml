@@ -1,34 +1,63 @@
-# This is a Rancher questions file
----
 questions:
-# General policy questions:
-- variable: "clusterScoped"
-  type: boolean
-  default: true
-  required: true
-  label: Scope of policy (cluster-wide or namespaced)
-  description: |
-    Either a cluster-wide policy (ClusterAdmissionPolicy) or a
-    namespaced one (AdmissionPolicy). If Namespaced, the namespace of the releaes
-    is what the AdmissionPolicy will be deployed into and apply for.
+- default: null
+  description: >-
+    This policy allows you to restrict what repositories, tags, and images pods
+    in your cluster can refer to. The configuration allows you to mix and match
+    several filters: registries, tags, and images. When both an allow list and a
+    reject list is supported, only one can be provided at the same time for that
+    specific filter.
   group: Settings
-- variable: "spec.mode"
-  type: enum
-  options:
-    - "monitor"
-    - "protect"
-  default: "protect"
-  required: true
-  label: Execution mode of the policy
-  description: Execution mode of the policy. "protect" will reject requests,
-    "monitor" will log them. Transitioning from "monitor" to "protect" is
-    allowed, but not from "protect" to "monitor".
+  label: Description
+  required: false
+  hide_input: true
+  type: string
+  variable: description
+- default: {}
+  description: Allow or reject images coming from a specified registry.
   group: Settings
-
-# Specific policy settings questions:
--
-  variable: "spec.settings"
-  type: multiline
-  default: ''
+  label: Registries
+  hide_input: true
+  type: map[
+  variable: registries
+  subquestions:
+    - default: []
+      group: Settings
+      label: Allow
+      type: array[
+      variable: registries.allow
+    - default: []
+      group: Settings
+      label: Reject
+      type: array[
+      variable: registries.reject
+- default: {}
+  description: Reject a specified tag for all images
   group: Settings
-  description: Policy settings
+  label: Tags
+  hide_input: true
+  type: map[
+  variable: tags
+  subquestions:
+    - default: []
+      group: Settings
+      label: Reject
+      type: array[
+      variable: tags.reject
+- default: {}
+  description: Accept or reject a specified image
+  group: Settings
+  label: Images
+  hide_input: true
+  type: map[
+  variable: images
+  subquestions:
+    - default: []
+      group: Settings
+      label: Allow
+      type: array[
+      variable: images.allow
+    - default: []
+      group: Settings
+      label: Reject
+      type: array[
+      variable: images.reject
