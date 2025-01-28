@@ -17,7 +17,7 @@ spec:
       operations:
         - CREATE
         - UPDATE
-  settings: |
+  settings:
     registries:
       # only one of 'allow' or 'reject' list is supported at the same time
       # allow:
