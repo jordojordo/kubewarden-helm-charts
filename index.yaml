@@ -15035,35 +15035,6 @@ entries:
       kubewarden/resources: Pod
     apiVersion: v2
     appVersion: 0.2.1
-    created: "2025-01-28T16:05:26.148458145Z"
-    description: Helm chart for deploying the pod-privileged Kubewarden policy
-    digest: 0f38d1f2051b34e5358231ed58b7e57c148a68a26dd7d3fc613d784044287082
-    home: https://www.kubewarden.io/
-    icon: https://www.kubewarden.io/images/icon-kubewarden.svg
-    keywords:
-    - psp
-    - pod
-    - container
-    - privileged
-    kubeVersion: '>= 1.19.0'
-    name: pod-privileged-policy
-    type: application
-    urls:
-    - https://github.com/jordojordo/kubewarden-helm-charts/releases/download/pod-privileged-policy-0.2.6/pod-privileged-policy-0.2.6.tgz
-    version: 0.2.6
-  - annotations:
-      catalog.cattle.io/certified: rancher
-      catalog.cattle.io/hidden: "true"
-      catalog.cattle.io/os: linux
-      catalog.cattle.io/permits-os: linux,windows
-      catalog.cattle.io/type: kubewarden-policy
-      catalog.cattle.io/ui-component: kubewarden
-      kubewarden/contextAwareResources: "false"
-      kubewarden/displayName: Pod Privileged Policy
-      kubewarden/mutation: "false"
-      kubewarden/resources: Pod
-    apiVersion: v2
-    appVersion: 0.2.1
     created: "2025-01-24T17:09:48.696772532Z"
     description: Helm chart for deploying the pod-privileged Kubewarden policy
     digest: c566adc0cddf255d0508c8a7d086c05c325bf5fb9501fa7f6d11c16225f408a2
