@@ -15035,6 +15035,35 @@ entries:
       kubewarden/resources: Pod
     apiVersion: v2
     appVersion: 0.2.1
+    created: "2025-03-12T17:40:04.203466127Z"
+    description: Helm chart for deploying the pod-privileged Kubewarden policy
+    digest: f891497a7cb1915944ac3ed20e3d562f653963a7026e5bf707eabeeef6ed6f36
+    home: https://www.kubewarden.io/
+    icon: https://www.kubewarden.io/images/icon-kubewarden.svg
+    keywords:
+    - psp
+    - pod
+    - container
+    - privileged
+    kubeVersion: '>= 1.19.0'
+    name: pod-privileged-policy
+    type: application
+    urls:
+    - https://github.com/jordojordo/kubewarden-helm-charts/releases/download/pod-privileged-policy-0.2.6/pod-privileged-policy-0.2.6.tgz
+    version: 0.2.6
+  - annotations:
+      catalog.cattle.io/certified: rancher
+      catalog.cattle.io/hidden: "true"
+      catalog.cattle.io/os: linux
+      catalog.cattle.io/permits-os: linux,windows
+      catalog.cattle.io/type: kubewarden-policy
+      catalog.cattle.io/ui-component: kubewarden
+      kubewarden/contextAwareResources: "false"
+      kubewarden/displayName: Pod Privileged Policy
+      kubewarden/mutation: "false"
+      kubewarden/resources: Pod
+    apiVersion: v2
+    appVersion: 0.2.1
     created: "2025-01-24T17:09:48.696772532Z"
     description: Helm chart for deploying the pod-privileged Kubewarden policy
     digest: c566adc0cddf255d0508c8a7d086c05c325bf5fb9501fa7f6d11c16225f408a2
@@ -15529,6 +15558,35 @@ entries:
       kubewarden/resources: Pod
     apiVersion: v2
     appVersion: 0.1.7
+    created: "2025-03-12T17:40:04.292442222Z"
+    description: Helm chart for deploying the verify-image-signatures Kubewarden policy
+    digest: a0e293a82beb06973ea246125f734266e26f77979d299f952c46efe08013e714
+    home: https://www.kubewarden.io/
+    icon: https://www.kubewarden.io/images/icon-kubewarden.svg
+    keywords:
+    - pod
+    - signature
+    - sigstore
+    - trusted
+    kubeVersion: '>= 1.19.0'
+    name: verify-image-signatures
+    type: application
+    urls:
+    - https://github.com/jordojordo/kubewarden-helm-charts/releases/download/verify-image-signatures-0.1.13/verify-image-signatures-0.1.13.tgz
+    version: 0.1.13
+  - annotations:
+      catalog.cattle.io/certified: rancher
+      catalog.cattle.io/hidden: "true"
+      catalog.cattle.io/os: linux
+      catalog.cattle.io/permits-os: linux,windows
+      catalog.cattle.io/type: kubewarden-policy
+      catalog.cattle.io/ui-component: kubewarden
+      kubewarden/contextAwareResources: "false"
+      kubewarden/displayName: Verify Image Signatures
+      kubewarden/mutation: "true"
+      kubewarden/resources: Pod
+    apiVersion: v2
+    appVersion: 0.1.7
     created: "2025-01-28T16:05:26.4816258Z"
     description: Helm chart for deploying the verify-image-signatures Kubewarden policy
     digest: 2c51807f3472d009eb288f4a63d7ceb434a5a3b3031c395489ebaba4db36900d
@@ -15670,4 +15728,4 @@ entries:
     urls:
     - https://github.com/jordojordo/kubewarden-helm-charts/releases/download/verify-image-signatures-0.1.7/verify-image-signatures-0.1.7.tgz
     version: 0.1.7
-generated: "2025-01-28T16:05:26.482489482Z"
+generated: "2025-03-12T17:40:04.293453354Z"
